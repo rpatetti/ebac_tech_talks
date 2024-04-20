@@ -1,6 +1,6 @@
 AOS.init();
 
-const dataDoEvento = new Date("apr 19, 2024 19:00:00");
+const dataDoEvento = new Date("Apr 25, 2024 19:00:00");
 const timeStampDoEvento = dataDoEvento.getTime();
 
 const contaAsHoras = setInterval(function() {
@@ -12,7 +12,7 @@ const contaAsHoras = setInterval(function() {
     const diasAteOEvento = Math.floor(distanciaAteOEvento / (1000 * 60 * 60 * 24))
     const horasAteOEvento = Math.floor((distanciaAteOEvento % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutosAteOEvento = Math.floor(distanciaAteOEvento %  (1000 * 60 * 60) / (1000 * 60))
-    const segundosAteOEvento = Math.floor((distanciaAteOEvento % 1000 * 60) / 1000);
+    const segundosAteOEvento = Math.floor((distanciaAteOEvento % (1000 * 60)) / 1000);
 
     document.getElementById('contador').innerHTML = `${diasAteOEvento}d ${horasAteOEvento}h ${minutosAteOEvento}m ${segundosAteOEvento}s`;
 
